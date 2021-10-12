@@ -1,0 +1,7 @@
+__pychache__/
+
+.idea/
+
+Data/
+
+venv/*.cfg
