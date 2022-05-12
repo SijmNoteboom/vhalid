@@ -1,0 +1,464 @@
+﻿"Option group name";"Option name";"Option value"
+1-5;1;1
+1-5;2;2
+1-5;3;3
+1-5;4;4
+1-5;5;5
+"All of the Time-None of the Time";"All of the time";1
+"All of the Time-None of the Time";"Most of the time";2
+"All of the Time-None of the Time";"A good bit of the time";3
+"All of the Time-None of the Time";"Some of the time";4
+"All of the Time-None of the Time";"A little of the time";5
+"All of the Time-None of the Time";"None of the time";6
+"All of the Time-None of the Time (2)";"All of the time";1
+"All of the Time-None of the Time (2)";"Most of the time";2
+"All of the Time-None of the Time (2)";"Some of the time";3
+"All of the Time-None of the Time (2)";"A little of the time";4
+"All of the Time-None of the Time (2)";"None of the time";5
+Anticoagulants;Nee;0
+Anticoagulants;"Platelet inhibitors (e.g.: acetylsalicylic acid, clopidogrel, ticagrelor,  persantin)";1
+Anticoagulants;"Direct Oral Anticoagulants (DOACs)";2
+Anticoagulants;"Vitamin K antagonists (VKAs)";3
+Anticoagulants;"Low-molecular-weight heparin (LMWH)";4
+Anticoagulants;Overig;5
+"Antihypertensive drugs";Nee;0
+"Antihypertensive drugs";"ACE inhibitors (e.g.: captopril, enalapril, lisinopril)";1
+"Antihypertensive drugs";"Alpha-blockers (e.g.: doxazosine, terazosine, urapidil)";2
+"Antihypertensive drugs";"Angiotensin receptor-blockers (e.g.: candesartan, losartan, valsartan)";3
+"Antihypertensive drugs";"Beta-blockers (e.g.: atenolol, bisoprolol, metoprolol)";4
+"Antihypertensive drugs";"Calcium antagonists (e.g.: amlodipine, diltiazem, verapamil)";5
+"Antihypertensive drugs";"Diuretics (e.g.: bumetanide, furosemide, hydrochloorthiazide)";6
+"Antihypertensive drugs";"Renin inhibitors (e.g.: aliskiren)";7
+"Antihypertensive drugs";"Overig (e.g.: clonidine)";8
+"arterial line";"radial artery";0
+"arterial line";other;1
+Bloed;Verwacht;1
+Bloed;"Enigszins boven verwachting";2
+Bloed;Ernstig;3
+Bloed;n.v.t.;4
+cardiaal;Blanco;0
+cardiaal;Hypertensie;1
+cardiaal;Coronairlijden;2
+cardiaal;"Decompensatio cordi";3
+cardiaal;Atriumfibrilleren;4
+cardiaal;Pacemaker/ICD;5
+cardiaal;"Open AAA  repair";6
+cardiaal;(T)EVAR;7
+cardiaal;CABG;8
+cardiaal;klepvervanging;9
+cardiaal;"Bentall/David procedure";10
+cardiaal;Overig;11
+"Cholesterol lowering";Nee;0
+"Cholesterol lowering";"Statins (e.g.: simvastatine, pravastatine, atorvastatine, rouvastatine)";1
+"Cholesterol lowering";Ezetimib;2
+"Cholesterol lowering";"PCSK-9 inhibitors";3
+"Cholesterol lowering";Overig;4
+Coagulanten;Blanco;0
+Coagulanten;Heparine;1
+Coagulanten;Fibrinogeen;2
+Coagulanten;Cellsaver;3
+Coagulanten;"Packed Cells";4
+Coagulanten;Trombocyten;5
+Coagulanten;"(Fresh Frozen) Plasma";6
+Coagulanten;Cofact;7
+Coagulanten;Albumine;8
+Coagulanten;Calcium;9
+Coagulanten;Protamine;10
+Coagulanten;"DDAVP (Minirin)";11
+Coagulanten;Antigibrinolytics;12
+Coagulanten;Overig;13
+Country;Afghanistan;1
+Country;Albania;2
+Country;Algeria;3
+Country;Andorra;4
+Country;Angola;5
+Country;"Antigua and Barbuda";6
+Country;Argentina;7
+Country;Armenia;8
+Country;Australia;9
+Country;Austria;10
+Country;Azerbaijan;11
+Country;Bahamas;12
+Country;Bahrain;13
+Country;Bangladesh;14
+Country;Barbados;15
+Country;Belarus;16
+Country;Belgium;17
+Country;Belize;18
+Country;Benin;19
+Country;Bhutan;20
+Country;Bolivia;21
+Country;"Bosnia and Herzegovina";22
+Country;Botswana;23
+Country;Brazil;24
+Country;Brunei;25
+Country;Bulgaria;26
+Country;"Burkina Faso";27
+Country;Burundi;28
+Country;"Cabo Verde";29
+Country;Cambodia;30
+Country;Cameroon;31
+Country;Canada;32
+Country;"Central African Republic";33
+Country;Chad;34
+Country;Chile;35
+Country;China;36
+Country;Colombia;37
+Country;Comoros;38
+Country;"Democratic Republic of the Congo";39
+Country;"Republic of the Congo";40
+Country;"Costa Rica";41
+Country;"Cote d Ivoire";42
+Country;Croatia;43
+Country;Cuba;44
+Country;Cyprus;45
+Country;"Czech Republic";46
+Country;Denmark;47
+Country;Djibouti;48
+Country;Dominica;49
+Country;"Dominican Republic";50
+Country;Ecuador;51
+Country;Egypt;52
+Country;"El Salvador";53
+Country;"Equatorial Guinea";54
+Country;Eritrea;55
+Country;Estonia;56
+Country;Ethiopia;57
+Country;Fiji;58
+Country;Finland;59
+Country;France;60
+Country;Gabon;61
+Country;Gambia;62
+Country;Georgia;63
+Country;Germany;64
+Country;Ghana;65
+Country;Greece;66
+Country;Grenada;67
+Country;Guatemala;68
+Country;Guinea;69
+Country;Guinea-Bissau;70
+Country;Guyana;71
+Country;Haiti;72
+Country;Honduras;73
+Country;Hungary;74
+Country;Iceland;75
+Country;India;76
+Country;Indonesia;77
+Country;Iran;78
+Country;Iraq;79
+Country;Ireland;80
+Country;Israel;81
+Country;Italy;82
+Country;Jamaica;83
+Country;Japan;84
+Country;Jordan;85
+Country;Kazakhstan;86
+Country;Kenya;87
+Country;Kiribati;88
+Country;Kosovo;89
+Country;Kuwait;90
+Country;Kyrgyzstan;91
+Country;Laos;92
+Country;Latvia;93
+Country;Lebanon;94
+Country;Lesotho;95
+Country;Liberia;96
+Country;Libya;97
+Country;Liechtenstein;98
+Country;Lithuania;99
+Country;Luxembourg;100
+Country;Macedonia;101
+Country;Madagascar;102
+Country;Malawi;103
+Country;Malaysia;104
+Country;Maldives;105
+Country;Mali;106
+Country;Malta;107
+Country;"Marshall Islands";108
+Country;Mauritania;109
+Country;Mauritius;110
+Country;Mexico;111
+Country;Micronesia;112
+Country;Moldova;113
+Country;Monaco;114
+Country;Mongolia;115
+Country;Montenegro;116
+Country;Morocco;117
+Country;Mozambique;118
+Country;"Myanmar (Burma)";119
+Country;Namibia;120
+Country;Nauru;121
+Country;Nepal;122
+Country;Netherlands;123
+Country;"New Zealand";124
+Country;Nicaragua;125
+Country;Niger;126
+Country;Nigeria;127
+Country;"North Korea";128
+Country;Norway;129
+Country;Oman;130
+Country;Pakistan;131
+Country;Palau;132
+Country;Palestine;133
+Country;Panama;134
+Country;"Papua New Guinea";135
+Country;Paraguay;136
+Country;Peru;137
+Country;Philippines;138
+Country;Poland;139
+Country;Portugal;140
+Country;Qatar;141
+Country;Romania;142
+Country;Russia;143
+Country;Rwanda;144
+Country;"Saint Kitts and Nevis";145
+Country;"Saint Lucia";146
+Country;"Saint Vincent and the Grenadines";147
+Country;Samoa;148
+Country;"San Marino";149
+Country;"Sao Tome and Principe";150
+Country;"Saudi Arabia";151
+Country;Senegal;152
+Country;Serbia;153
+Country;Seychelles;154
+Country;"Sierra Leone";155
+Country;Singapore;156
+Country;Slovakia;157
+Country;Slovenia;158
+Country;"Solomon Islands";159
+Country;Somalia;160
+Country;"South Africa";161
+Country;"South Korea";162
+Country;"South Sudan";163
+Country;Spain;164
+Country;"Sri Lanka";165
+Country;Sudan;166
+Country;Suriname;167
+Country;Swaziland;168
+Country;Sweden;169
+Country;Switzerland;170
+Country;Syria;171
+Country;Taiwan;172
+Country;Tajikistan;173
+Country;Tanzania;174
+Country;Thailand;175
+Country;Timor-Leste;176
+Country;Togo;177
+Country;Tonga;178
+Country;"Trinidad and Tobago";179
+Country;Tunisia;180
+Country;Turkey;181
+Country;Turkmenistan;182
+Country;Tuvalu;183
+Country;Uganda;184
+Country;Ukraine;185
+Country;"United Arab Emirates";186
+Country;"United Kingdom";187
+Country;"United States of America";188
+Country;Uruguay;189
+Country;Uzbekistan;190
+Country;Vanuatu;191
+Country;"Vatican City";192
+Country;Venezuela;193
+Country;Vietnam;194
+Country;Yemen;195
+Country;Zambia;196
+Country;Zimbabwe;197
+crys;Geen;0
+crys;"Isotonic (bijv. Lactated Ringer's/Hartman's solution)";1
+crys;"Hypotonic (NaCL)";2
+crys;Hypertonic;3
+"Definitely true-Definitely false";"Definitely true";1
+"Definitely true-Definitely false";"Mostly true";2
+"Definitely true-Definitely false";"Don't know";3
+"Definitely true-Definitely false";"Mostly false";4
+"Definitely true-Definitely false";"Definitely false";5
+Excellent-Poor;Excellent;1
+Excellent-Poor;"Very good";2
+Excellent-Poor;Good;3
+Excellent-Poor;Fair;4
+Excellent-Poor;Poor;5
+FamHistory;"Renal disease";0
+FamHistory;Deafness;1
+FamHistory;(Cardio)myopathy;2
+FamHistory;Encephalopathy;3
+FamHistory;"Diabetes Mellitus";4
+FamHistory;"Hypertension/Cardiovascular disease";5
+FamHistory;Thrombosis;6
+FamHistory;Malignancy;7
+fuvis_type_grp;"in-patient admission";1
+fuvis_type_grp;"out-patient visit";2
+fuvis_type_grp;"admission to day-care";3
+"GAD-7 scale";"Not at all";0
+"GAD-7 scale";"Several days";1
+"GAD-7 scale";"More than half the days";2
+"GAD-7 scale";"Nearly every day";3
+gastro;Blanco;0
+gastro;"Peptisch ulcus";1
+gastro;GI-bloeding;2
+gastro;"IBD (Crohn/colitis ulcerose)";3
+gastro;"Leverziekte (bijv. hepatitis, cirrose, NAFLD)";4
+gastro;Overig;5
+"Health a year ago";"Much better now than one year ago";1
+"Health a year ago";"Somewhat better now than one year ago";2
+"Health a year ago";"About the same";3
+"Health a year ago";"Somewhat worse now than one year ago";4
+"Health a year ago";"Much worse now than one year ago";5
+Limits;"Yes, limited a lot";1
+Limits;"Yes, limited a little";2
+Limits;"No, not limited at all";3
+"Mate van bloeding";Verwacht;0
+"Mate van bloeding";"Enigszins boven  verwachting";1
+"Mate van bloeding";Ernstig;2
+med_class_dropdown;"ACE inhibitor (ACEi)";1
+med_class_dropdown;"Angiotensin receptor blocker (ARB)";2
+med_class_dropdown;"Loop diuretics";3
+med_class_dropdown;"Anti-aldosterone diurectics";4
+med_class_dropdown;"Thiazide diuretics";5
+med_class_dropdown;"Other diurectics";6
+med_class_dropdown;"Lipid lowering drugs";7
+med_class_dropdown;Anti-platelets;8
+med_class_dropdown;Anti-coagulants;9
+med_class_dropdown;"Prednisolone (oral administration)";10
+med_class_dropdown;"Methylprednisolone (IV pulse therapy)";11
+med_class_dropdown;Cyclophosphamide;12
+med_class_dropdown;"Cyclosporin A";13
+med_class_dropdown;Tacrolimus;14
+med_class_dropdown;"Mycofenolate Mofetil (MMF)";15
+med_class_dropdown;Azathioprine;16
+med_class_dropdown;Chloorambucil;17
+med_class_dropdown;Rituximab;18
+med_class_dropdown;"Oral anti-diabetics";19
+med_class_dropdown;"Insulin s.c.";20
+med_class_dropdown;"Anti-Blyss (belumimab)";21
+med_class_dropdown;ACTH;22
+med_class_dropdown;Ofatumumab;23
+med_class_dropdown;NSAID;24
+med_class_dropdown;Eculizumab;25
+med_class_dropdown;Bortezomib;26
+med_class_dropdown;Daratumumab;27
+med_class_dropdown;IVIG;29
+med_class_dropdown;"Electrolyte supplements";30
+med_class_dropdown;"Other antihypertensives";31
+med_class_dropdown;"Proton pump inhibitors (PPIs)";32
+med_class_dropdown;"Other medication";33
+metabool;Blanco;0
+metabool;"Diabetes type I";1
+metabool;"Diabetes type II";2
+metabool;Hypercholestorolemie;3
+metabool;Hypothyreoidie;4
+metabool;Hyperthyreoidie;5
+neuro;Blanco;1
+neuro;"Ischemisch/hemorragisch CVA of TIA";2
+neuro;SAB;3
+neuro;Dementie;4
+neuro;Parkinson;5
+neuro;Overig;6
+no/yes-former/yes-current;Unknown;0
+no/yes-former/yes-current;No;1
+no/yes-former/yes-current;"Yes - former";2
+no/yes-former/yes-current;"Yes - current";4
+"None-Very severe";None;1
+"None-Very severe";"Very mild";2
+"None-Very severe";Mild;3
+"None-Very severe";Moderate;4
+"None-Very severe";Severe;5
+"None-Very severe";"Very severe";6
+"Not at all-Extremely";"Not at all";1
+"Not at all-Extremely";Slightly;2
+"Not at all-Extremely";Moderately;3
+"Not at all-Extremely";"Quite a bit";4
+"Not at all-Extremely";Extremely;5
+"Not at all-Extremely (pain)";"Not at all";1
+"Not at all-Extremely (pain)";"A little bit";2
+"Not at all-Extremely (pain)";Moderately;3
+"Not at all-Extremely (pain)";"Quite a bit";4
+"Not at all-Extremely (pain)";Extremely;5
+og_medunits;Unknown;0
+og_medunits;ug/day;1
+og_medunits;mg/day;2
+og_medunits;g/day;3
+og_medunits;ug/week;4
+og_medunits;mg/week;5
+og_medunits;g/week;6
+og_smoker;No;0
+og_smoker;"Yes, former";1
+og_smoker;"Yes, current";2
+og_ynu;No;0
+og_ynu;Yes;1
+og_ynu;Unknown;9
+Position;"Lying down";1
+Position;Sitting;2
+Position;Standing;3
+pulmonaal;Blanco;0
+pulmonaal;Astma;1
+pulmonaal;COPD;2
+pulmonaal;Longembolie;3
+pulmonaal;Overig;4
+RenalDiagnosis;"Kidney stones";0
+RenalDiagnosis;"Nephrotic syndrome";1
+RenalDiagnosis;"Minimal change nephropathy";2
+RenalDiagnosis;"Focal glomerulosclerosis";3
+RenalDiagnosis;"Membranous nephropathy";4
+RenalDiagnosis;"IgA nephropathy";5
+RenalDiagnosis;"Henoch Schonlein Purpura/ IgA vasculitis";6
+RenalDiagnosis;Glomerulonephritis;7
+RenalDiagnosis;Glomerulopathy;8
+RenalDiagnosis;"Lupus nephritis";9
+RenalDiagnosis;"Diabetic nephropathy";10
+RenalDiagnosis;"Cast nephropathy";11
+RenalDiagnosis;"M. Alport";12
+RenalDiagnosis;Fanconi;13
+RenalDiagnosis;Other;14
+sae;Overlijden;0
+sae;Levensbedreigend;1
+sae;"(Verlenging van) ziekenhuisopname";2
+sae;"Congenitale afwijking";3
+sae;"Blijvende invaliditeit of arbeidsongeschiktheid";4
+sae;Anders;5
+sea2;"Ja,  met restverschijnselen";0
+sea2;"Ja, zonder restverschijnselen";1
+sea2;Nee;2
+sea2;Overleden;3
+sea2;Onbekend;4
+Severe/moderate;moderate;0
+Severe/moderate;severe;1
+sex;Male;0
+sex;Female;1
+"surgery type";CABG;0
+"surgery type";"AVR (aortaklepvervanging)";1
+"surgery type";"AVP (aortaklepplastiek)";2
+"surgery type";"MVR (mitraalklepvervanging)";3
+"surgery type";"MVP (mitraalklepplastiek)";4
+"surgery type";"TVR (tricuspidaalklpepvervanging";5
+"surgery type";"TVP (tricuspidaalklepplastiek)";6
+"surgery type";"Klepbesparende ascendensvervanging";7
+"surgery type";"Klep-en ascendensvervanging (Bentall procedure)";8
+"surgery type";"Ascendens-en boogvervanging (Elephant trunk)";9
+"surgery type";PEARS;10
+"surgery type";Mini-MVP;12
+"surgery type";Myxoomresectie;15
+"surgery type";"Myextomie septum";16
+"surgery type";ASD-sluiting;17
+"surgery type";VSD-sluiting;18
+"surgery type";Overig;19
+trombo;Nee;0
+trombo;"ADP-receptor remmers (bijv. clopidogrel, ticagrelor, prasugrel)";1
+trombo;"COX-remmers (bijv. acetylsalicylzuur, carbasalaatcalcium)";2
+trombo;"Fosfodiesteraseremmers (bijv. dipyridamol)";3
+trombo;Overig;4
+uro;Blanco;0
+uro;"Chronische nierinsufficiëntie";1
+uro;Niertransplantatie;2
+uro;Overig;3
+"VHA analysis options";"Fibrinogen deficit";0
+"VHA analysis options";"Thrombocyte defecit";1
+"VHA analysis options";"Coagulation factor defecit";2
+"VHA analysis options";Hyperfibrinolysis;3
+"VHA analysis options";"Heparin effect";4
+"VHA analysis options";"Niet van toepassing (niet klinisch)";5
+Yes/No;No;1
+Yes/No;Yes;0
+yes/no/unknown;No;0
+yes/no/unknown;Yes;1
+yes/no/unknown;Unknown;2
