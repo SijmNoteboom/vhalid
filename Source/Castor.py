@@ -8,7 +8,7 @@ from dataclasses import dataclass, field
 @dataclass
 class Castor:
     dir: Path = Path("Info/")
-    new_table: pd.DataFrame = pd.DataFrame([])
+    new_table: pd.DataFrame = pd.DataFrame
     table: str = field(init=False)
 
 
@@ -18,5 +18,5 @@ class Castor:
 
 
 if __name__ == "__main__":
-    info = Castor()
+    information = Castor()
     x = 3
