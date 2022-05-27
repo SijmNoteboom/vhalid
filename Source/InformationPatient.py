@@ -71,16 +71,17 @@ class InformationPatient(Translate):
 
         overview_hist = pd.DataFrame(columns=['hist_type'])
         for hist in hist_patient.index:
+            # TODO: implement this in the med history method
             if hist.split(sep='#')[1].lower() == "blanco":
                 continue
             else:
                 hist_type = InformationPatient._translate_med_history(hist)
-                overview_hist.append({'hist_type': hist_type}, ignore_index=True)
+                overview_hist = overview_hist.append({'hist_type': hist_type}, ignore_index=True)
         self.history = overview_hist
         # TODO: add oncological VG and coagulant VG
                     
 if __name__ == "__main__":
-    patient = InformationPatient(15, Castor())
+    patient = InformationPatient(14, Castor())
     patient._get_demographics()
     patient._get_medication()
     patient._get_history()
