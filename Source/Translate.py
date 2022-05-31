@@ -91,6 +91,15 @@ class Translate:
                       "hist_renal_dis": "Other urigenital disease"}
         return hist_other[abs_history]
 
+    def _translate_gen_history(gen_hist):
+        hist_general = {"hist_cancer": "Oncological history", 
+                        "vg_reuma": "Rheumatoid arthritis or collagen vascular disease",
+                        "vg_coagul": "Congenital coagulation factor deficiency",
+                        "weight_loss": ">10% weight loss over the passed 6 months",
+                        "hist_smoking": "Smoker", "drug_use": "Drug user",
+                        "alcohol_consump": "Drinker"}
+        return hist_general[gen_hist]
+
 
     # def _translate_surg_type(surg_type: str) -> str:
     #     surg_tranlate = {}

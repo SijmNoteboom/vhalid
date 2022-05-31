@@ -1,7 +1,0 @@
-﻿"Record Id";"Study / Report";"Report Name";"Field Id";"Field Variable name / Field label";Date;User;Comment;"Current value"
-110015;Study;;8EB80BF6-4521-40E5-9687-9310F9159D98;height;"20-07-2021 11:03:25";"Eline Kho";"Reason for changing the field's value to 'Missing (not asked)': No comment given for setting field to user missing.";##USER_MISSING_97##
-110015;Study;;F752E6F0-C10C-4FF9-A295-C91358A822CF;asa_class;"20-07-2021 11:04:24";"Eline Kho";"Reason for changing the field's value to 'Missing (not asked)': No comment given for setting field to user missing.";3
-110015;Study;;63FB45CF-7852-4D55-8004-47C4D0CA1949;tranex_dose;"20-07-2021 11:19:54";"Eline Kho";"Reason for changing the field's value to 'Missing (not applicable)': Op de pomp: start-stop (9.10-11.45) totaal: 602 mg.";##USER_MISSING_96##
-110015;Study;;4154D28D-AD53-4D0B-9FD6-BD195386E91C;Time_ACT1;"20-07-2021 11:20:12";"Eline Kho";"Reason for changing the field's value to 'Missing (not applicable)': No comment given for setting field to user missing.";##USER_MISSING_96##
-110015;Study;;3F9B2262-F9D6-42EA-8B6B-8F2450CEE5FE;Value_ACT1;"20-07-2021 11:20:18";"Eline Kho";"Reason for changing the field's value to 'Missing (not applicable)': No comment given for setting field to user missing.";##USER_MISSING_96##
-110016;Study;;F752E6F0-C10C-4FF9-A295-C91358A822CF;asa_class;"27-07-2021 09:25:38";"Eline Kho";"Reason for changing the field's value to 'Missing (not done)': No comment given for setting field to user missing.";3

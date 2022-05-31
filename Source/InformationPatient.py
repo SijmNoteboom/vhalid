@@ -1,6 +1,8 @@
 from Castor import Castor
 
 import pandas as pd
+# from pandas.plotting import table
+import matplotlib.pyplot as plt
 
 from dataclasses import dataclass, field
 
@@ -25,6 +27,8 @@ class InformationPatient(Translate):
             if param == "type_surg":
                 surgery = self.row[var == param][0]
                 self.demograph_df.loc[param] = InformationPatient._translate_surg_type(surgery)
+            elif "-" in str(self.row[var == param][0]):
+                self.demograph_df.loc[param] = "Unknown"
             else:
                 self.demograph_df.loc[param] = self.row[var == param][0]
  
@@ -71,14 +75,27 @@ class InformationPatient(Translate):
 
         overview_hist = pd.DataFrame(columns=['hist_type'])
         for hist in hist_patient.index:
-            # TODO: implement this in the med history method
             if hist.split(sep='#')[1].lower() == "blanco":
                 continue
             else:
                 hist_type = InformationPatient._translate_med_history(hist)
                 overview_hist = overview_hist.append({'hist_type': hist_type}, ignore_index=True)
         self.history = overview_hist
-        # TODO: add oncological VG and coagulant VG
+        InformationPatient._get_general_history(self, self.row[end_id_hist:end_id_hist + 7])
+
+    def _get_general_history(self, gen_history):
+        overview_gen_history = pd.DataFrame(columns=['general history'])
+        for hist in gen_history.index:
+            if "Yes" in gen_history[hist]:
+                gen_hist = InformationPatient._translate_gen_history(hist)
+                if "former" in gen_history[hist]:
+                    gen_hist = f"Former {gen_hist}"
+                elif "current" in gen_history[hist]:
+                    gen_hist = f"Current {gen_hist}"
+                overview_gen_history = overview_gen_history.append({'general history': gen_hist}, ignore_index=True)
+        self.gen_history = overview_gen_history
+
+
                     
 if __name__ == "__main__":
     patient = InformationPatient(14, Castor())
