@@ -1,8 +1,6 @@
 from Castor import Castor
 
 import pandas as pd
-# from pandas.plotting import table
-import matplotlib.pyplot as plt
 
 from dataclasses import dataclass, field
 
@@ -17,11 +15,12 @@ class InformationPatient(Translate):
         if self.patient_number in self.info.table.index:
              self.row = self.info.table.iloc[self.patient_number]
 
-    def _get_demographics(self):
+    def get_demographics(self):
         var = self.row.index
         self.demograph_df = pd.DataFrame(columns=['Value'])
-        self.demograph_df.loc["id"] = repr(self.row[var == "Record Id"][0])[-3:]
-        
+        # self.demograph_df.loc["id"] = repr(self.row[var == "Record Id"][0])[-3:]
+        print(f"Patient ID = {repr(self.row[var == 'Record Id'][0])[-3:]}")
+
         list_param = ["age", "height", "weight", "bmi", "bsa", "type_surg"]
         for param in list_param:
             if param == "type_surg":
@@ -32,7 +31,7 @@ class InformationPatient(Translate):
             else:
                 self.demograph_df.loc[param] = self.row[var == param][0]
  
-    def _get_medication(self):
+    def get_medication(self):
         start_id_meds = self.row.index.get_loc("antihyper_med#Nee")
         end_id_meds = self.row.index.get_loc("3.4|Thuismedicatie: gebruikt patiënt thrombocytenaggregatieremmers?(Overig)") + 1
 
@@ -66,7 +65,7 @@ class InformationPatient(Translate):
             complete_name = "Other cholesterol-lowering agents"
         return complete_name
 
-    def _get_history(self):
+    def get_history(self):
         start_id_hist = self.row.index.get_loc("hist_cardio_dis#Blanco")
         end_id_hist = self.row.index.get_loc("hist_renal_dis#Overig") + 1
 
@@ -95,11 +94,10 @@ class InformationPatient(Translate):
                 overview_gen_history = overview_gen_history.append({'general history': gen_hist}, ignore_index=True)
         self.gen_history = overview_gen_history
 
-
                     
 if __name__ == "__main__":
     patient = InformationPatient(14, Castor())
-    patient._get_demographics()
-    patient._get_medication()
-    patient._get_history()
+    patient.get_demographics()
+    patient.get_medication()
+    patient.get_history()
     x = 3
