@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+from pyrsistent import b
+
 @dataclass
 class Translate:
 
@@ -13,7 +15,7 @@ class Translate:
                           "TVP (mitraalklepplastiek)": "Tricuspid Valve Repair",
                           "Klepbesparende ascendensvervanging": "Valve-Sparing Root Replacement (VSRR)",
                           "Klep-en ascendensvervanging (Bentall procedure)": "Bentall procedure",
-                          "Ascendens-en boogvervanging (Elephant trunk)": "Elephant trunk procedure",
+                          "Ascendens-en boogvervanging (Elephant trunk)": "Aortic Arch Replacement",
                           "PEARS": "Personalized External Aortic Root Support (PEARS)",
                           "Mini-MVP": "Mini mitral valve repair",
                           "Myxoomresectie": "Myxoma Resection",
@@ -99,6 +101,25 @@ class Translate:
                         "hist_smoking": "Smoker", "drug_use": "Drug user",
                         "alcohol_consump": "Drinker"}
         return hist_general[gen_hist]
+
+    def _translate_meds(med_type):
+        med_types = {"ADP-receptor remmers": "ADP-receptor inhibitors",
+                     "COX-remmers": "COX-inhibitors",
+                     "Fosfodiesteraseremmers": "Phosphodiesterase inhibitor"}
+        try:
+            med_type = med_types[med_type]
+        except KeyError:
+            pass
+        return med_type
+    
+    def _translate_bleeding(bleeding_level) -> str:
+        bleeding_dict = {"Verwacht": "Expected", 
+                         "Enigszins boven verwachting": "Slightly more than expected",
+                         "Ernstig": "Severe bleeding"} 
+        if bleeding_level.replace(".", "").lower() == "nvt":
+            return "Unknown"
+        else:
+            return bleeding_dict[bleeding_level]
 
 
     # def _translate_surg_type(surg_type: str) -> str:
