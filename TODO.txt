@@ -1,7 +1,5 @@
-23/8:
-TODO: - ClinicalInfo.py, def _vha_parent()   [bij "iets" toegediend staat niet altijd ja -> 
-							veranderen: check of er iets in "dosering" / "tijd_stop" staat]
-	voorbeeld, line 78 --> dit overal toepassen
+26/8:
+TODO:
 
-	- ClinicalInfo.py, comments Henning toepassen (hoeveelheid heparine toevoegen?)
+	- Heparine/TXA voor en tijdens pomp checken met EPIC...
 	

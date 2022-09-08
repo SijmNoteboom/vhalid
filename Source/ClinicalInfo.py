@@ -6,6 +6,7 @@ from Castor import Castor
 
 import pandas as pd
 import numpy as np
+import math
 
 import datetime
 
@@ -48,110 +49,6 @@ class ClinicalInfo(Translate):
 
         self.incision_time = np.float64(self.row[var == "time_incision"][0].replace(':', '.'))
 
-    # def _vha_parent(self, num, vha_df):
-    #     #TODO: bij "iets" toegediend staat niet altijd ja -> veranderen: check of er iets in "dosering" / "tijd_stop" staat
-    #     var = self.var
-    #     try:
-    #         time_vha = self.row[var == f"vha{num}_VHA{num}_Tijd_bloedafname_VHA"][0]
-    #     except IndexError:
-    #         try:
-    #             time_vha = self.row[var == f"vha{num}_1_VHA{num}_Tijd_bloedafname_VHA"][0]
-    #         except IndexError:
-    #             time_vha = self.row[var == f"vha{num}_1_VHA{num}_Tijd_bloedafname_VHA_"][0]
-
-    #     # when blood product are applied
-    #     if num == 2 or num == 3 or num == 4 or num == 5 or num == 8 or num == 9:
-    #         num = "2_2" if num == 2 else num
-    #         num = "8_2" if num == 8 else num
-    #         num = "9_21" if num == 9 else num
-
-    #         # if self.row[var == f"vha{num}_Cellsaver_Coagulant_toegediend?"][0] in ("Ja", "ja"):
-                
-    #         if self.row[var == f"vha{num}_Cellsaver_Coagulant_toegediend?"][0] in ("Ja", "ja") or not self.row[var == f"vha{num}_Cellsaver_Dosering_mL_"].isna()[0]:
-    #             vha_df.loc["Amount of Cellsaver, administered prior to VHA"] = self.row[var == f"vha{num}_Cellsaver_Dosering_mL_"][0]
-
-    #         if self.row[var == f"vha{num}_Packed_Cells_Coagulant_toegediend?"][0] in ("Ja", "ja"):
-    #             vha_df.loc["Packed red blood cells administered before VHA?"] = "Yes"
-    #             vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time = self._get_timeline(f"vha{num}_Packed_Cells_Tijd_stop", time_vha)
-    #         if self.row[var == f"vha{num}_Thrombocyten_Coagulant_toegediend?"][0] in ("Ja", "ja"):
-    #             vha_df.loc["Thrombocytes administered before VHA?"] = "Yes"
-    #             try:
-    #                 vha_df = vha_df.drop(index=["Time after coagulation therapy (min)"])
-    #             except KeyError:
-    #                 pass
-    #             finally:
-    #                 try:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time = self._get_timeline(f"vha{num}_Thrombocyten_Tijd_stop", time_vha)
-    #                 except ValueError:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time           
-    #         if self.row[var == f"vha{num}_Fresh_Frozen_Plasma_Coagulant_toegediend?"][0] in ("Ja", "ja"):
-    #             vha_df.loc["Plasma transfusion before VHA?"] = "Yes"
-    #             try:
-    #                 vha_df = vha_df.drop(index=["Time of VHA after coagulation therapy (min)"])
-    #             except KeyError:
-    #                 pass
-    #             finally:
-    #                 try:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time = self._get_timeline(f"vha{num}_Fresh_Frozen_Plasma_Tijd_stop", time_vha)
-    #                 except ValueError:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time   
-    #         if self.row[var == f"vha{num}_Cofact_Coagulant_toegediend?"][0] in ("Ja", "ja"):
-    #             vha_df.loc["(Four factor) prothrombin complex concentrate administered before VHA?"] = "Yes"
-    #             try:
-    #                 vha_df = vha_df.drop(index=["Time of VHA after coagulation therapy (min)"])
-    #             except KeyError:
-    #                 pass
-    #             finally:
-    #                 try:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time = self._get_timeline(f"vha{num}_Cofact_Tijd_stop", time_vha)
-    #                 except ValueError:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time   
-    #         if self.row[var == f"vha{num}_DDAVP_Minirin__Coagulant_toegediend?"][0] in ("Ja", "ja"):
-    #             vha_df.loc["Desmopressin administered before VHA?"] = "Yes"
-    #             try:
-    #                 vha_df = vha_df.drop(index=["Time of VHA after coagulation therapy (min)"])
-    #             except KeyError:
-    #                 pass
-    #             finally:
-    #                 try:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time = self._get_timeline(f"vha{num}_DDAVP_Minirin__Tijd_stop", time_vha)
-    #                 except ValueError:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time          
-    #         if self.row[var == f"vha{num}_Antigibrinolytics_Coagulant_toegediend?"][0] in ("Ja", "ja"):
-    #             vha_df.loc["Antigibrinolytics administered before VHA?"] = "Yes"
-    #             try:
-    #                 vha_df = vha_df.drop(index=["Time of VHA after coagulation therapy (min)"])
-    #             except KeyError:
-    #                 pass
-    #             finally:
-    #                 try:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time = self._get_timeline(f"vha{num}_Antigibrinolytics_Tijd_stop", time_vha)
-    #                 except ValueError:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time  
-    #         if self.row[var == f"vha{num}_Heparine_Coagulant_toegediend?"][0] in ("Ja", "ja"):
-    #             vha_df.loc["Heparin administered before VHA?"] = "Yes"
-    #             try:
-    #                 vha_df = vha_df.drop(index=["Time of VHA after coagulation therapy (min)"])
-    #             except KeyError:
-    #                 pass
-    #             finally:
-    #                 try:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time = self._get_timeline(f"vha{num}_Heparine_Tijd_stop", time_vha)
-    #                 except ValueError:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time  
-    #         if self.row[var == f"vha{num}_Overig_Coagulant_toegediend?"][0] in ("Ja", "ja"):
-    #             vha_df.loc["Protamin administered before VHA?"] = "Yes"
-    #             try:
-    #                 vha_df = vha_df.drop(index=["Time of VHA after coagulation therapy (min)"])
-    #             except KeyError:
-    #                 pass
-    #             finally:
-    #                 try:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time = self._get_timeline(f"vha{num}_Overig_Tijd_stop", time_vha)
-    #                 except ValueError:
-    #                     vha_df.loc["Time of VHA after coagulation therapy (min)"] = previous_time  
-    #     return vha_df
-
     def _vha_parent(self, num, vha_df):
         #TODO: bij "iets" toegediend staat niet altijd ja -> veranderen: check of er iets in "dosering" / "tijd_stop" staat
         var = self.var
@@ -174,7 +71,7 @@ class ClinicalInfo(Translate):
             # if self.row[var == f"vha{num}_Cellsaver_Coagulant_toegediend?"][0] in ("Ja", "ja"):
                 
             if self.row[var == f"vha{num}_Cellsaver_Coagulant_toegediend?"][0] in ("Ja", "ja") or not self.row[var == f"vha{num}_Cellsaver_Dosering_mL_"].isna()[0]:
-                vha_df.loc["Amount of Cellsaver, administered prior to VHA"] = self.row[var == f"vha{num}_Cellsaver_Dosering_mL_"][0]
+                vha_df.loc["Amount of Cellsaver, administered prior to VHA (mL)"] = self.row[var == f"vha{num}_Cellsaver_Dosering_mL_"][0]
 
             if self.row[var == f"vha{num}_Packed_Cells_Coagulant_toegediend?"][0] in ("Ja", "ja") or not self.row[var == f"vha{num}_Packed_Cells_Dosering_mL_"].isna()[0]:
                 list_products.append("Packed red blood cells<br>")
@@ -261,12 +158,15 @@ class ClinicalInfo(Translate):
         return vha_df
 
     def _get_timeline(self, start_str: str, stop_time: np.float64) -> int:
-        start_time = self.row[self.var == start_str][0]
-        if type(start_time) == str:
-            start_time = np.float64(start_time.replace(':', '.'))
-        time_to_vha = abs(datetime.timedelta(minutes=stop_time % 1 * 100, hours = np.floor(stop_time)) \
-                 - datetime.timedelta(minutes=start_time % 1 * 100, hours = np.floor(start_time))).seconds / 60
-        return time_to_vha
+        if not self.row[self.var == start_str][0] <= 0:
+            start_time = self.row[self.var == start_str][0]
+            if type(start_time) == str:
+                start_time = np.float64(start_time.replace(':', '.'))
+            time_to_vha = abs(datetime.timedelta(minutes=stop_time % 1 * 100, hours = np.floor(stop_time)) \
+                    - datetime.timedelta(minutes=start_time % 1 * 100, hours = np.floor(start_time))).seconds / 60
+            return time_to_vha
+        else:
+            raise ValueError
 
     def get_vha1(self):
         num = 1
@@ -286,8 +186,6 @@ class ClinicalInfo(Translate):
         num_cor = num - 6 if num >= 7 else num
         vha1.loc[f"Timespan of VHA{num_cor} since incision"] = f"{int(time_to_vha)} minutes"
         self.vha1 = vha1
-       
-        # self.vha1 = self._vha_parent(num, vha1)
 
     def get_vha2(self):
         num = 2
@@ -297,10 +195,10 @@ class ClinicalInfo(Translate):
 
         if self.row[var == "tranex"][0] == "Yes":
             # vha2.loc["Time (min) of tranexamic acid administration after incision"] = self._get_timeline("tranex_time", self.incision_time)
-            vha2.loc["Dosis of tranexamic acid [mg/kg]"] = self.row[var == "tranex_dose"][0] / int(self.row[var == "weight"][0])
+            vha2.loc["Dosis of tranexamic acid before CPB (mg)"] = self.row[var == "tranex_dose"][0] # round(self.row[var == "tranex_dose"][0] / int(self.row[var == "weight"][0]), 1)
 
-        if self.row[var == "dose_heparin_2"][0].any():
-            if self.row[var == "dose_heparin_3"][0].any():
+        if not math.isnan(self.row[var == "dose_heparin_2"]):
+            if not math.isnan(self.row[var == "dose_heparin_3"]):
                 hep_dosage = self.row[var == "dose_heparin"][0] + self.row[var == "dose_heparin_2"][0] + self.row[var == "dose_heparin_3"][0]
             else:
                 hep_dosage = self.row[var == "dose_heparin"][0] + self.row[var == "dose_heparin_2"][0]
@@ -308,7 +206,7 @@ class ClinicalInfo(Translate):
             hep_dosage = self.row[var == "dose_heparin"][0]
 
         # vha2.loc["Time (min) of heparin administration after incision"] = self._get_timeline("time_heparin", self.incision_time)
-        vha2.loc["Dosis of heparin [I.U./kg]"] = hep_dosage / int(self.row[var == "weight"][0])
+        vha2.loc["Dosis of heparin before CPB (I.U.)"] = hep_dosage # round(hep_dosage / int(self.row[var == "weight"][0]), 1)
 
         vha2.loc["Level of bleeding according physician at the OR"] = ClinicalInfo._translate_bleeding(
             self.row[var == "vha2_1_VHA2_Mate_van_bloeding_volgens_arts?"][0])

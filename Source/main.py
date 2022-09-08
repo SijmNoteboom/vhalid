@@ -9,7 +9,7 @@ import numpy as np
 def main():
     information = Castor()
     amount_of_patients = information.table.shape[0]
-    for file in np.arange(3, 20):
+    for file in np.arange(1, 20):
         length_id = len(str(file))
         if length_id == 1:
             pt_id = int(f"11000{file}") 
@@ -49,8 +49,8 @@ def main():
             patient.get_vha9()
             list_vha.append("vha9")
 
-        Castor._print_dataframe(patient, file + 1, list_vha)
-        Castor._print_dataframe(demograph, file + 1, list_demo)
+        Castor._print_dataframe(patient, pt_id, list_vha)
+        Castor._print_dataframe(demograph, pt_id, list_demo)
 
 if __name__ == '__main__':
     main()

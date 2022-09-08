@@ -54,8 +54,8 @@ class Castor:
                         df_str = "vha2_ic8"
                     elif df_str == "vha9":
                         df_str = "vha3_ic9"
-                    # fig.write_image(save_dir / f"{df_str}.png", scale=2)
-                    pyo.plot(fig)
+                    fig.write_image(save_dir / f"{df_str}.png", scale=2)
+                    # pyo.plot(fig)
 
 
 if __name__ == "__main__":
